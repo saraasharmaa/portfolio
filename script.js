@@ -55,7 +55,6 @@ const resumeFiles = {
 const resumeNames = {
   "Business Analytics": "Master resume",
   "AI/ML Engineer": "AI/ML Engineer resume",
-  "Quantitative Analytics": "Quantitative Analytics resume",
   "Financial & Economic Data Analysis": "Financial & Economic Data Analysis resume",
   "AI/ML Research": "AI/ML Research resume",
 };
