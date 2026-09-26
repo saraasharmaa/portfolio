@@ -1,81 +1,21 @@
-const filters = document.querySelectorAll(".filter");
-const projectCards = document.querySelectorAll(".project-card");
-
-filters.forEach((filter) => {
-  filter.addEventListener("click", () => {
-    const selected = filter.dataset.filter;
-
-    filters.forEach((item) => {
-      item.classList.toggle("active", item === filter);
-    });
-
-    projectCards.forEach((card) => {
-      const categories = card.dataset.category.split(" ");
-      const shouldShow = selected === "all" || categories.includes(selected);
-      card.classList.toggle("hidden", !shouldShow);
-    });
-  });
-});
-
-const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".nav");
-
-menuToggle.addEventListener("click", () => {
-  const isOpen = nav.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-});
-
-document.querySelectorAll(".nav a").forEach((link) => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-  });
-});
-
-/*
-  Add your actual PDF filenames here.
-
-  Expected folder:
-  assets/
-    resumes/
-      sara-sharma-master.pdf
-      sara-sharma-ai-ml-engineer.pdf
-      sara-sharma-quantitative-analytics.pdf
-      sara-sharma-financial-economic-analysis.pdf
-      sara-sharma-ai-ml-research.pdf
-      sara-sharma-policy-decision-intelligence.pdf
-*/
-const resumeFiles = {
-  "Business Analytics": "assets/resumes/sarasharma_BA/SA.pdf",
-  "AI/ML Engineer": "assets/resumes/sarasharma_AIML_.pdf",
-  "Financial & Economic Data Analysis": "assets/resumes/Sara_Sharma_BOA_Resume.pdf",
-  "AI/ML Research": "assets/resumes/sarasharma_AIResearch_.pdf",
+const body=document.body,header=document.querySelector('.site-header'),loader=document.querySelector('.preloader'),loaderLine=document.querySelector('.loader-line span'),loaderCount=document.querySelector('.loader-count');
+const cases={
+ niti:{kicker:'Decision Intelligence / NITI Aayog',title:'Government Data → <span class="serif">Decision System</span>',copy:'Integrated 16 government datasets covering 900K+ records into an AI-enabled workflow for beneficiary profiling, predictive scoring, intervention recommendation, outcome monitoring, and case prioritization. The workflow produced structured outputs including 3–5 success factors, 2–4 blockers, and 2–5 targeted interventions per profile.',stats:[['Scale','16 datasets · 900K+ records'],['Methods','Logistic Regression · Random Forest'],['Workflow','Scoring · matching · projection · action plans'],['Data','PMMY · PLFS · Udyam']]},
+ reliability:{kicker:'Model Reliability / Research',title:'Reliability <span class="serif">Under Shift</span>',copy:'Developed an end-to-end reliability framework using uncertainty estimation, calibration, and out-of-distribution detection to evaluate model performance under temporal and spatial distribution shifts. Compared standard, uncertainty-aware, and abstention-based approaches and extended testing to LLM systems under adversarial and OOD inputs.',stats:[['Core','Uncertainty · calibration · OOD'],['Shift','Temporal · spatial'],['Modeling','Standard · uncertainty-aware · abstention'],['Extension','LLM adversarial / OOD testing']]},
+ oracle:{kicker:'Defence AI / DRDO',title:'ORACLE-X <span class="serif">Anomaly Intelligence</span>',copy:'Designed and prototyped an uncertainty-aware AI/ML solution combining temporal Transformers, state estimation, physics-guided modeling, and XGBoost for predictive anomaly detection. Built end-to-end pipelines spanning telemetry preprocessing, feature engineering, anomaly scoring, uncertainty estimation, explainability, and fault analysis.',stats:[['Architecture','Transformers · state estimation · XGBoost'],['Signals','Telemetry · sensor degradation'],['Evaluation','Operating-regime robustness'],['Lens','Uncertainty · explainability · fault analysis']]},
+ commerce:{kicker:'Business Analytics / React',title:'Campaign Performance <span class="serif">Prediction & Optimization</span>',copy:'Built a prescriptive analytics solution achieving 82% prediction accuracy for customer-volume and sales-surge detection. Automated 65% of manual analysis through optimization logic for campaign budgets, targets, and timing and developed an analytics interface for KPI monitoring and decision support.',stats:[['Accuracy','82% prediction accuracy'],['Automation','65% of manual analysis'],['Stack','Python · Scikit-learn · React'],['Decision layer','Budget · target · timing optimization']]},
+ ecoavia:{kicker:'Research / ICISC 2026',title:'ECOAVIA <span class="serif">Aviation Demand</span>',copy:'Developed a hybrid XGBoost–ARIMA–LSTM forecasting framework integrating climate and infrastructure variables to analyze aviation demand trends and generate data-driven insights for sustainability-oriented policy analysis.',stats:[['Models','XGBoost · ARIMA · LSTM'],['Domain','Aviation demand'],['Variables','Climate · infrastructure'],['Purpose','Sustainability-oriented policy analysis']]}
 };
+function openCase(id){const c=cases[id],modal=document.getElementById('caseModal'),content=document.getElementById('modalContent');if(!c)return;content.innerHTML='<div class="modal-kicker">'+c.kicker+'</div><h2 class="modal-title">'+c.title+'</h2><p class="modal-copy">'+c.copy+'</p><div class="modal-grid">'+c.stats.map(([a,b])=>'<div class="modal-stat"><strong>'+a+'</strong><span>'+b+'</span></div>').join('')+'</div>';modal.classList.add('open');modal.setAttribute('aria-hidden','false');body.classList.add('modal-open')}
+function closeCase(){const modal=document.getElementById('caseModal');modal.classList.remove('open');modal.setAttribute('aria-hidden','true');body.classList.remove('modal-open')}
+document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>openCase(b.dataset.open)));document.querySelectorAll('[data-close-modal]').forEach(x=>x.addEventListener('click',closeCase));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCase()});
 
-const resumeNames = {
-  "Business Analytics": "Master resume",
-  "AI/ML Engineer": "AI/ML Engineer resume",
-  "Financial & Economic Data Analysis": "Financial & Economic Data Analysis resume",
-  "AI/ML Research": "AI/ML Research resume",
-};
-
-const resumeSelect = document.querySelector("#resume-select");
-const resumeDownload = document.querySelector("#resume-download");
-const resumeStatus = document.querySelector("#resume-status");
-
-resumeDownload.addEventListener("click", () => {
-  const selected = resumeSelect.value;
-  const file = resumeFiles[selected];
-
-  if (!file) {
-    resumeStatus.textContent = `${resumeNames[selected]} is not connected yet. Add its PDF path to the resumeFiles object in script.js.`;
-    return;
-  }
-
-  const link = document.createElement("a");
-  link.href = file;
-  link.download = file.split("/").pop();
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-});
+document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;document.querySelectorAll('.project-card').forEach(card=>card.classList.toggle('is-hidden',!(f==='all'||card.dataset.category===f))) }));
+window.addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>10),{passive:true});
+const revealObs=new IntersectionObserver((entries,obs)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>revealObs.observe(x));
+function fmt(el,v){return el.dataset.format==='compact'?(v>=1e6?(v/1e6).toFixed(1).replace('.0','')+'M+':v>=1e3?Math.round(v/1e3)+'K+':v):v.toLocaleString()}
+const countObs=new IntersectionObserver((entries,obs)=>entries.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,target=Number(el.dataset.count),suffix=el.dataset.suffix||'',start=performance.now(),dur=1000;function tick(now){const p=Math.min((now-start)/dur,1),q=1-Math.pow(1-p,4);el.textContent=fmt(el,Math.round(target*q))+suffix;if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick);obs.unobserve(el)}),{threshold:.8});document.querySelectorAll('[data-count]').forEach(x=>countObs.observe(x));
+if(matchMedia('(pointer:fine)').matches){const ring=document.querySelector('.cursor-ring'),dot=document.querySelector('.cursor-dot');let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px'},{passive:true});(function loop(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop)})();document.querySelectorAll('[data-cursor]').forEach(el=>{el.addEventListener('mouseenter',()=>ring.classList.add('active'));el.addEventListener('mouseleave',()=>ring.classList.remove('active'))});
+ document.querySelectorAll('.magnetic').forEach(el=>{el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-(r.left+r.width/2))*.18,y=(e.clientY-(r.top+r.height/2))*.18;el.style.transform=`translate(${x}px,${y}px)`});el.addEventListener('mouseleave',()=>el.style.transform='')});
+ document.querySelectorAll('.project-card').forEach(card=>{card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect(),ry2=((e.clientX-r.left)/r.width-.5)*4,rx2=((e.clientY-r.top)/r.height-.5)*-4;card.style.transform=`perspective(900px) rotateX(${rx2}deg) rotateY(${ry2}deg) translateY(-6px)`});card.addEventListener('mouseleave',()=>card.style.transform='')});}
+addEventListener('load',()=>{let p=0;const t=setInterval(()=>{p+=Math.floor(Math.random()*13)+7;if(p>=100){p=100;clearInterval(t);setTimeout(()=>loader.classList.add('done'),240)}loaderLine.style.width=p+'%';loaderCount.textContent=String(p).padStart(2,'0')+'%'},90)});

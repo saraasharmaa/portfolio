@@ -1,343 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sara Sharma | AI/ML Engineer, quantitative analytics, forecasting, reliability, and research." />
-  <title>Sara Sharma | AI/ML Engineer</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Sara Sharma — Data Scientist, Advanced Analytics, AI/ML & Data Products.">
+  <meta name="theme-color" content="#171812">
+  <title>Sara Sharma — Data Scientist</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="noise"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <div class="preloader" aria-hidden="true">
+    <div class="loader-head"><span>SARA SHARMA</span><span>DS / AI / ANALYTICS</span></div>
+    <div class="loader-line"><span></span></div>
+    <div class="loader-count">00%</div>
+  </div>
 
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Sara Sharma home">
-      <span class="brand-mark">SS</span>
-      <span>SARA SHARMA<span class="accent">.</span></span>
-    </a>
-
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#work">Work</a>
-      <a href="#experience">Experience</a>
-      <a href="#research">Research</a>
-      <a href="#resumes">Resumes</a>
-      <a href="#contact">Contact</a>
+    <a class="brand magnetic" href="#top" data-cursor="Home"><span class="brand-mark">SS</span><span class="brand-name">Sara Sharma</span></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#work" class="nav-link" data-cursor="Work">Work</a>
+      <a href="#experience" class="nav-link" data-cursor="Path">Path</a>
+      <a href="#research" class="nav-link" data-cursor="Research">Research</a>
+      <a href="#resume" class="nav-link" data-cursor="CV">Résumé</a>
+      <a href="#contact" class="nav-cta magnetic" data-cursor="Contact">Let’s talk</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero section">
-      <div class="hero-copy">
-        <p class="eyebrow">AI/ML ENGINEER · QUANTITATIVE ANALYTICS · RESEARCH</p>
-        <h1>Systems that<br><span>learn.</span><br>Insights that<br>matter.</h1>
-        <p class="lede">
-          I build data-driven intelligence across machine learning, predictive analytics,
-          financial and economic datasets, decision systems, and research-led applications.
-        </p>
-        <div class="actions">
-          <a class="button button-lime" href="#work">Explore selected work ↗</a>
-          <a class="button button-outline" href="#contact">Start a conversation</a>
+    <section class="hero section-grid">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot"></span> DATA SCIENTIST / AI·ML / DECISION SYSTEMS</div>
+        <h1>Analytics with <span class="serif">judgment.</span><br>AI with <span class="serif italic">range.</span></h1>
+        <p class="hero-lede">I turn complex data, models, and operational questions into decision-ready systems across research, industry, and public-sector analytics.</p>
+        <div class="hero-actions">
+          <a href="#work" class="button button-dark magnetic">Explore selected work <span>↘</span></a>
+          <a href="assets/resumes/sara-sharma-data-scientist.pdf" class="text-link" download>Download résumé ↗</a>
         </div>
       </div>
-
-      <div class="hero-art" aria-label="Abstract computational graphic">
-        <div class="orbit"></div>
-        <div class="hero-sticker">DATA → MODELS → DECISIONS</div>
-        <div class="hero-vertical">SARA</div>
+      <div class="hero-side reveal reveal-delay-1">
+        <div class="hero-monogram">SS</div>
+        <div class="hero-caption"><span>2026</span><span>India · Research · Analytics</span></div>
+        <div class="hero-orbit" aria-hidden="true"><i></i><i></i><b></b><b></b><b></b></div>
       </div>
     </section>
 
-    <div class="ticker">
-      MACHINE LEARNING <b>✳</b>
-      DISTRIBUTION SHIFT <b>✳</b>
-      FORECASTING <b>✳</b>
-      DECISION INTELLIGENCE <b>✳</b>
-      MULTIMODAL SYSTEMS <b>✳</b>
-      EXPLAINABLE AI <b>✳</b>
-    </div>
+    <section class="marquee-section" aria-label="Capabilities">
+      <div class="marquee-track"><span>Predictive Modeling</span><b>·</b><span>Advanced Analytics</span><b>·</b><span>Model Reliability</span><b>·</b><span>Decision Intelligence</span><b>·</b><span>Forecasting</span><b>·</b><span>AI / ML Orchestration</span><b>·</b><span>Predictive Modeling</span><b>·</b><span>Advanced Analytics</span><b>·</b><span>Model Reliability</span><b>·</b><span>Decision Intelligence</span></div>
+    </section>
 
-    <section class="section" id="about">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">01 / PROFILE</p>
-          <h2>Technical depth.<br />Applied context.</h2>
-        </div>
-        <p class="section-note">
-          A portfolio built around academic research, public-sector datasets,
-          industrial machine learning, and applied AI systems.
-        </p>
-      </div>
-
-      <div class="about-grid">
-        <p class="about-lede">
-          My work sits at the intersection of <strong>AI/ML engineering</strong>,
-          quantitative analysis, and real-world decision-making. I am interested in
-          models that are not only accurate, but interpretable, robust, and useful.
-        </p>
-
-        <div class="stats">
-          <article class="stat"><strong>05+</strong><span>Academic, public-policy, industrial, and research environments.</span></article>
-          <article class="stat"><strong>16</strong><span>Government datasets referenced in the NITI Aayog decision-intelligence work.</span></article>
-          <article class="stat"><strong>03</strong><span>Core themes: forecasting, reliability, and decision intelligence.</span></article>
-          <article class="stat"><strong>01</strong><span>Published research contribution: ECOAVIA at ICISC 2026.</span></article>
-        </div>
+    <section class="impact section-grid">
+      <div class="section-kicker reveal">01 / AT A GLANCE</div>
+      <div class="impact-copy reveal reveal-delay-1"><h2>Build the model.<br><span class="serif">Question the model.</span><br>Ship the decision.</h2><p>The work sits where quantitative analysis meets implementation: data quality, predictive modeling, evaluation, explanation, and the final handoff into a decision process.</p></div>
+      <div class="impact-metrics">
+        <article class="metric reveal"><strong data-count="16">0</strong><span>government datasets integrated</span></article>
+        <article class="metric reveal reveal-delay-1"><strong data-count="900000" data-format="compact">0</strong><span>records analyzed</span></article>
+        <article class="metric reveal reveal-delay-2"><strong data-count="90" data-suffix="%">0%</strong><span>initial DRDO test accuracy</span></article>
+        <article class="metric reveal reveal-delay-3"><strong data-count="100" data-suffix="+">0+</strong><span>datasets curated in two weeks</span></article>
       </div>
     </section>
 
-    <section class="section" id="work">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">02 / SELECTED WORK</p>
-          <h2>Built to be<br />useful.</h2>
-        </div>
+    <section id="work" class="work section-grid">
+      <div class="section-heading reveal"><div class="section-kicker">02 / SELECTED WORK</div><h2>Systems that<br><span class="serif">make analysis useful.</span></h2></div>
+      <div class="filter-row reveal reveal-delay-1" role="tablist" aria-label="Project filters">
+        <button class="filter active" data-filter="all">All</button><button class="filter" data-filter="decision">Decision Intelligence</button><button class="filter" data-filter="ml">ML / AI</button><button class="filter" data-filter="research">Research</button>
       </div>
-
-      <div class="filters" role="group" aria-label="Filter projects">
-        <button class="filter active" data-filter="all">All work</button>
-        <button class="filter" data-filter="reliability">Model reliability</button>
-        <button class="filter" data-filter="forecasting">Forecasting</button>
-        <button class="filter" data-filter="policy">Policy & finance</button>
-        <button class="filter" data-filter="research">Research</button>
-      </div>
-
-      <div class="project-grid">
-        <article class="project-card tone-violet" data-category="reliability research">
-          <div class="project-meta"><span>PROJECT / 01</span><span>RESEARCH</span></div>
-          <h3>Machine Learning Reliability Under Distribution Shift</h3>
-          <p>
-            A framework for temporal and spatial distribution shift using uncertainty,
-            calibration, out-of-distribution detection, and abstention-aware evaluation.
-            The work also extends reliability analysis to LLMs under adversarial and OOD inputs.
-          </p>
-          <div class="tags"><span>OOD detection</span><span>Calibration</span><span>Uncertainty</span><span>LLMs</span></div>
-        </article>
-
-        <article class="project-card tone-orange" data-category="forecasting">
-          <div class="project-meta"><span>PROJECT / 02</span><span>APPLIED ML</span></div>
-          <h3>AI-Driven Supply Chain Intelligence Platform</h3>
-          <p>
-            A multi-engine XGBoost platform for demand forecasting, risk analysis,
-            scenario exploration, and supply-chain decision support, paired with
-            SHAP-based interpretation and a Next.js interface.
-          </p>
-          <div class="tags"><span>XGBoost</span><span>Scenario analysis</span><span>SHAP</span><span>Next.js</span></div>
-        </article>
-
-        <article class="project-card tone-lime" data-category="policy forecasting">
-          <div class="project-meta"><span>PROJECT / 03</span><span>PUBLIC POLICY</span></div>
-          <h3>Decision Intelligence for Financial & Economic Data</h3>
-          <p>
-            Analysis of PMMY, PLFS, and Udyam datasets, including credit access,
-            loan disbursement, borrower categories, employment, wages, skills,
-            and enterprise-registration indicators for evidence-based policy analysis.
-          </p>
-          <div class="tags"><span>PMMY</span><span>PLFS</span><span>Udyam</span><span>Risk scoring</span></div>
-        </article>
-
-        <article class="project-card tone-cyan" data-category="research forecasting">
-          <div class="project-meta"><span>PROJECT / 04</span><span>PUBLICATION</span></div>
-          <h3>ECOAVIA</h3>
-          <p>
-            Data-driven aviation demand forecasting for sustainable policy advisory,
-            using ensemble XGBoost, ARIMA, and LSTM approaches with climate and
-            infrastructure variables. Published at ICISC 2026.
-          </p>
-          <div class="tags"><span>XGBoost</span><span>ARIMA</span><span>LSTM</span><span>Sustainability</span></div>
-        </article>
-
-        <article class="project-card tone-violet" data-category="research">
-          <div class="project-meta"><span>PROJECT / 05</span><span>ENERGY SYSTEMS</span></div>
-          <h3>Physics-Informed Building Energy Modeling</h3>
-          <p>
-            A physics-informed neural network integrating HVAC, weather, building,
-            and IoT data for predictive building-energy modeling, heat-load profiles,
-            and evaluation across varying conditions.
-          </p>
-          <div class="tags"><span>PINNs</span><span>IoT</span><span>HVAC</span><span>Energy modeling</span></div>
-        </article>
-
-        <article class="project-card tone-orange" data-category="research reliability">
-          <div class="project-meta"><span>PROJECT / 06</span><span>ONGOING</span></div>
-          <h3>Multimodal Research for Defence-Oriented Analytics</h3>
-          <p>
-            Ongoing volunteer research involving heterogeneous data modalities,
-            complex-source integration and interpretation, structured experimentation,
-            and model assessment for defence-oriented analytical systems.
-          </p>
-          <div class="tags"><span>Multimodal data</span><span>Sensor fusion</span><span>Evaluation</span><span>DRDO</span></div>
-        </article>
+      <div class="project-stack">
+        <article class="project-card featured reveal" data-category="decision"><div class="project-number">01</div><div class="project-meta">DECISION INTELLIGENCE · NITI AAYOG</div><h3>Government Data →<br><span class="serif">Decision System</span></h3><p>Integrated 16 government datasets covering 900K+ records into an AI-enabled workflow for beneficiary profiling, predictive scoring, intervention recommendation, outcome monitoring, and case prioritization.</p><div class="project-bottom"><div class="tagset"><span>Python</span><span>Logistic Regression</span><span>Random Forest</span></div><button class="case-button" data-open="niti">Open case <span>↗</span></button></div></article>
+        <article class="project-card reveal reveal-delay-1" data-category="ml"><div class="project-number">02</div><div class="project-meta">MODEL RELIABILITY · RESEARCH</div><h3>Reliability<br><span class="serif">Under Shift</span></h3><p>Uncertainty, calibration, OOD detection, abstention, temporal and spatial distribution shift, plus LLM testing under adversarial inputs.</p><div class="project-bottom"><div class="tagset"><span>Evaluation</span><span>OOD</span><span>LLM Testing</span></div><button class="case-button" data-open="reliability">Open case <span>↗</span></button></div></article>
+        <article class="project-card reveal reveal-delay-2" data-category="ml"><div class="project-number">03</div><div class="project-meta">DEFENCE AI · DRDO</div><h3>ORACLE-X<br><span class="serif">Anomaly Intelligence</span></h3><p>Uncertainty-aware predictive anomaly detection combining temporal Transformers, state estimation, physics-guided modeling, and XGBoost.</p><div class="project-bottom"><div class="tagset"><span>Transformers</span><span>XGBoost</span><span>Uncertainty</span></div><button class="case-button" data-open="oracle">Open case <span>↗</span></button></div></article>
+        <article class="project-card reveal" data-category="decision"><div class="project-number">04</div><div class="project-meta">BUSINESS ANALYTICS · REACT</div><h3>Campaign Performance<br><span class="serif">Prediction & Optimization</span></h3><p>Prescriptive analytics solution achieving 82% prediction accuracy for customer-volume and sales-surge detection, with 65% of manual analysis automated.</p><div class="project-bottom"><div class="tagset"><span>Python</span><span>Scikit-learn</span><span>React</span></div><button class="case-button" data-open="commerce">Open case <span>↗</span></button></div></article>
+        <article class="project-card wide reveal" data-category="research"><div class="project-number">05</div><div class="project-meta">FORECASTING · ICISC 2026</div><h3>ECOAVIA<br><span class="serif">Aviation Demand</span></h3><p>Hybrid XGBoost–ARIMA–LSTM forecasting with climate and infrastructure variables for sustainability-oriented policy analysis.</p><div class="project-bottom"><div class="tagset"><span>XGBoost</span><span>ARIMA</span><span>LSTM</span></div><button class="case-button" data-open="ecoavia">Open case <span>↗</span></button></div></article>
       </div>
     </section>
 
-    <section class="section" id="experience">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">03 / EXPERIENCE</p>
-          <h2>Different domains.<br />One toolkit.</h2>
-        </div>
-      </div>
-
-      <div class="experience-grid">
-        <div class="timeline">
-          <article class="role">
-            <span class="date">2026 – PRESENT</span>
-            <h3>DRDO · Volunteer AI/ML Researcher</h3>
-            <p>Ongoing scientist-supervised research involving heterogeneous data modalities and structured experimentation for defence-oriented analytical systems.</p>
-          </article>
-          
-          <article class="role">
-            <span class="date">SEP 2026 – PRESENT</span>
-            <h3>IIT Bombay · AI/ML Intern</h3>
-            <p>End-to-end machine-learning research for spatial scene understanding in architectural environments, including dataset preparation, model development, and evaluation.</p>
-          </article>
-
-          <article class="role">
-            <span class="date">AUG 2026 – SEP 2026</span>
-            <h3>NITI Aayog · Data Management & Analysis Intern</h3>
-            <p>Analyzed government datasets related to credit, loans, employment, wages, skills, and enterprise registration. Contributed to AI-powered decision intelligence and explored Logistic Regression and Random Forest models for entrepreneurial trajectories and risk-oriented policy analysis.</p>
-          </article>
-
-          <article class="role">
-            <span class="date">JUN 2025 – SEP 2025</span>
-            <h3>Fluentgrid Limited · Python & ML Intern</h3>
-            <p>Developed a multi-engine XGBoost forecasting system for supply-chain intelligence, including demand, risk, scenario analysis, operational data processing, feature engineering, and SHAP interpretation.</p>
-          </article>
-
-          <article class="role">
-            <span class="date">JUL 2024 – SEP 2024</span>
-            <h3>Inferrix Greentech · AI Research Intern</h3>
-            <p>Worked on a physics-informed neural network for predictive building-energy modeling using HVAC, weather, building, and IoT data. Generated heat-load profiles and evaluated varying conditions.</p>
-          </article>
-        </div>
-
-        <div>
-
-          <div class="institution-grid">
-            <article class="institution-card">
-              <img src="assets/images/iit-bombay.jpg" alt="IIT Bombay campus" onerror="this.style.display='none';" />
-              <div class="institution-overlay">
-                <span class="institution-initial">IITB</span>
-                <h3>Indian Institute of Technology Bombay</h3>
-                <p>Academic research · Spatial scene understanding · Machine learning</p>
-                <a href="https://www.iitb.ac.in/" target="_blank" rel="noopener">Official website ↗</a>
-              </div>
-            </article>
-
-            <article class="institution-card">
-              <img src="assets/images/niti-aayog.jpg" alt="NITI Aayog building or institutional setting" onerror="this.style.display='none';" />
-              <div class="institution-overlay">
-                <span class="institution-initial">NITI</span>
-                <h3>NITI Aayog</h3>
-                <p>Public policy · Government datasets · Decision intelligence</p>
-                <a href="https://www.niti.gov.in/" target="_blank" rel="noopener">Official website ↗</a>
-              </div>
-            </article>
-
-            <article class="institution-card">
-              <img src="assets/images/drdo.jpg" alt="DRDO institutional setting" onerror="this.style.display='none';" />
-              <div class="institution-overlay">
-                <span class="institution-initial">DRDO</span>
-                <h3>Defence Research & Development Organisation</h3>
-                <p>Ongoing research · Multimodal analytics · Defence-oriented systems</p>
-                <a href="https://www.drdo.gov.in/" target="_blank" rel="noopener">Official website ↗</a>
-              </div>
-            </article>
-          </div>
-        </div>
+    <section class="institutions section-grid">
+      <div class="section-kicker reveal">03 / WHERE THE WORK HAPPENED</div>
+      <div class="institution-grid">
+        <a class="institution-card reveal" href="https://www.iitb.ac.in/" target="_blank" rel="noopener" data-cursor="IIT Bombay"><img src="https://images.indianexpress.com/2026/02/IIT-Bombay.jpg?w=1600" alt="IIT Bombay main building" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('image-fallback')"><div class="institution-overlay"><span>AI/ML INTERN · SEPT 2026—PRESENT</span><h3>IIT Bombay</h3><p>Spatial scene understanding · CNNs · Swin Transformer · data-quality pipelines</p></div></a>
+        <a class="institution-card reveal reveal-delay-1" href="https://www.niti.gov.in/" target="_blank" rel="noopener" data-cursor="NITI Aayog"><img src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-10/23/thumb/fitandfill/1200X900/1729678919-1389.jpg" alt="NITI Aayog Bhawan sign" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('image-fallback')"><div class="institution-overlay"><span>DATA MANAGEMENT & ANALYSIS · AUG—SEPT 2026</span><h3>NITI Aayog</h3><p>Government datasets · predictive scoring · policy decision intelligence</p></div></a>
+        <a class="institution-card reveal reveal-delay-2" href="https://www.drdo.gov.in/" target="_blank" rel="noopener" data-cursor="DRDO"><img src="https://upload.wikimedia.org/wikipedia/commons/7/76/DRDO_Bhawan.jpg" alt="DRDO Bhawan headquarters" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('image-fallback')"><div class="institution-overlay"><span>AI/ML RESEARCH · 2026—PRESENT</span><h3>DRDO</h3><p>Reliability · anomaly detection · heterogeneous data · defence analytics</p></div></a>
       </div>
     </section>
 
-    <section class="section" id="research">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">04 / RESEARCH & SKILLS</p>
-          <h2>Curiosity with<br />structure.</h2>
-        </div>
-      </div>
-
-      <div class="skills-grid">
-        <article class="skill-box">
-          <h3>Modeling & ML</h3>
-          <p>Logistic Regression · Random Forest · XGBoost · Neural Networks · Deep Learning · PINNs · Time-series modeling · Forecasting · Risk scoring · Model evaluation</p>
-        </article>
-        <article class="skill-box">
-          <h3>Reliability & Explainability</h3>
-          <p>Uncertainty estimation · Calibration · OOD detection · Abstention-aware modeling · Distribution-shift analysis · Explainable AI · SHAP</p>
-        </article>
-        <article class="skill-box">
-          <h3>Engineering Stack</h3>
-          <p>Python · SQL · JavaScript · Pandas · NumPy · PostgreSQL · PyTorch · TensorFlow · scikit-learn · MLflow · FastAPI · Docker · Git · CI/CD · Next.js</p>
-        </article>
-      </div>
-
-      <article class="publication">
-        <p class="eyebrow">PUBLICATION</p>
-        <h3>ECOAVIA: Data-Driven Aviation Demand Forecasting for Sustainable Policy Advisory</h3>
-        <p>
-          Published at ICISC 2026. The work combines ensemble forecasting methods with
-          climate and infrastructure variables to support sustainability-oriented policy advisory.
-        </p>
-      </article>
-    </section>
-
-    <section class="section" id="resumes">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">05 / RESUME LIBRARY</p>
-          <h2>One profile.<br />Multiple angles.</h2>
-        </div>
-      </div>
-
-      <div class="resume-grid">
-        <div class="resume-intro">
-          <p class="eyebrow">ROLE-ALIGNED DOCUMENTS</p>
-          <h3>Make the first page count.</h3>
-          <p>
-            AI/ML engineering | Quantitative analytics | Financial analytics | Research | Policy-oriented roles.
-          </p>
-          <span class="mono">SARA SHARMA / CV SYSTEM</span>
-        </div>
-
-        <div class="resume-controls">
-          <label for="resume-select">Target role</label>
-          <select id="resume-select">
-            <option value="business analyst">Master resume</option>
-            <option value="aiml">AI/ML Engineer</option>
-            <option value="finance">Financial & Economic Data Analysis</option>
-            <option value="research">AI/ML Research</option>
-          </select>
-          <button id="resume-download" class="button button-lime full">Download selected resume ↓</button>
-          <p id="resume-status" class="status" aria-live="polite">
-            You can download the role-specific resume from here!
-          </p>
-        </div>
+    <section id="experience" class="experience section-grid">
+      <div class="section-heading reveal"><div class="section-kicker">04 / TRAJECTORY</div><h2>A career in<br><span class="serif">layers.</span></h2></div>
+      <div class="timeline">
+        <article class="timeline-item reveal"><div class="timeline-date">SEP 2026 — NOW</div><div class="timeline-body"><span>AI/ML INTERN · MUMBAI</span><h3>IIT Bombay</h3><p>Curated and augmented 100+ datasets in two weeks; developed, trained, and evaluated CNN and Swin Transformer models; built data-quality and synthetic-degradation pipelines.</p></div></article>
+        <article class="timeline-item reveal"><div class="timeline-date">AUG — SEP 2026</div><div class="timeline-body"><span>DATA MANAGEMENT & ANALYSIS · NEW DELHI</span><h3>NITI Aayog</h3><p>Integrated 16 government datasets and 900K+ records into an AI-enabled decision-intelligence workflow spanning scoring, blocker identification, program matching, outcome projection, and intervention recommendation.</p></div></article>
+        <article class="timeline-item reveal"><div class="timeline-date">2026 — NOW</div><div class="timeline-body"><span>AI/ML RESEARCH VOLUNTEER · HYDERABAD</span><h3>DRDO</h3><p>Conducted scientist-supervised AI/ML research using heterogeneous data sources for object/event recognition; initial testing reached 90% accuracy while model specificity and operating-condition evaluation continued.</p></div></article>
+        <article class="timeline-item reveal"><div class="timeline-date">JAN — JUL 2026</div><div class="timeline-body"><span>AI RESEARCH INTERN · HYDERABAD</span><h3>DRDO</h3><p>Designed and prototyped ORACLE-X with telemetry preprocessing, anomaly scoring, uncertainty estimation, explainability, and fault analysis across sensor-degradation scenarios.</p></div></article>
+        <article class="timeline-item reveal"><div class="timeline-date">JUN — SEP 2025</div><div class="timeline-body"><span>PYTHON & MACHINE LEARNING INTERN · VISAKHAPATNAM</span><h3>Fluentgrid Limited</h3><p>Developed a five-engine XGBoost forecasting system integrating demand, risk, and scenario analysis; used SHAP for explainability and translated operational data into quantitative insights.</p></div></article>
+        <article class="timeline-item reveal"><div class="timeline-date">JUL — SEP 2024</div><div class="timeline-body"><span>AI RESEARCH INTERN · NOIDA</span><h3>Inferrix Greentech</h3><p>Developed a Physics-Informed Neural Network using HVAC, weather, building, and IoT data; contributed to a reported 15% reduction in energy consumption through predictive modeling and optimization.</p></div></article>
       </div>
     </section>
 
-    <section class="section contact" id="contact">
-      <div>
-        <p class="eyebrow">06 / CONTACT</p>
-        <h2>Have a hard problem?<br />Let’s model it.</h2>
-        <p class="section-note">
-          Open to conversations around applied machine learning, research,
-          quantitative analytics, forecasting, reliability, and decision intelligence.
-        </p>
-      </div>
+    <section id="research" class="research section-grid">
+      <div class="section-kicker reveal">05 / RESEARCH</div>
+      <div class="research-main reveal reveal-delay-1"><div class="research-stamp">ICISC<br>2026</div><h2>ECOAVIA</h2><p class="research-title">Aviation Demand Forecasting</p><p>Hybrid XGBoost–ARIMA–LSTM forecasting integrating climate and infrastructure variables to analyze demand trends and generate data-driven insights for sustainability-oriented policy analysis.</p><div class="research-meta"><span>Presented / publication pending</span><span>Forecasting · Sustainability · Aviation</span></div></div>
+      <div class="research-rail reveal reveal-delay-2"><div class="rail-label">RESEARCH PRINCIPLES</div><div class="rail-list"><span>Quantify uncertainty</span><span>Stress the model</span><span>Explain the output</span><span>Connect to action</span></div></div>
+    </section>
 
-      <div class="contact-links">
-        <a href="mailto:sarasharma2827@gmail.com"><span>Email</span><strong>sarasharma2827@gmail.com ↗</strong></a>
-        <a href="https://github.com/saraasharmaa" target="_blank" rel="noopener"><span>GitHub</span><strong>@saraasharmaa ↗</strong></a>
-        <a href="https://linkedin.com/in/sharmasara" target="_blank" rel="noopener"><span>LinkedIn</span><strong>/in/sharmasara ↗</strong></a>
-      </div>
+    <section id="resume" class="resume section-grid">
+      <div class="section-kicker reveal">06 / RÉSUMÉ</div>
+      <div class="resume-card reveal reveal-delay-1"><div><span class="resume-label">PRIMARY CV</span><h2>Data Scientist / Advanced Analytics / AI·ML & Data Products</h2><p>The current uploaded résumé is already wired into this site as the primary downloadable résumé.</p></div><div class="resume-actions"><a class="button button-light magnetic" href="assets/resumes/sara-sharma-data-scientist.pdf" target="_blank" rel="noopener">View résumé ↗</a><a class="text-link light" href="assets/resumes/sara-sharma-data-scientist.pdf" download>Download PDF</a></div></div>
+      <div class="resume-note reveal"><span>ROLE-TARGETED VERSIONS</span><p>Drop future PDFs into <code>assets/resumes/</code> and add them to the resume config in <code>script.js</code>. The interface is ready for multiple versions.</p></div>
+    </section>
+
+    <section id="contact" class="contact section-grid">
+      <div class="section-kicker reveal">07 / CONTACT</div>
+      <div class="contact-main reveal reveal-delay-1"><p class="contact-kicker">AVAILABLE FOR THE NEXT INTERESTING PROBLEM</p><h2>Let's make<br><span class="serif italic">the numbers move.</span></h2><a class="contact-email magnetic" href="mailto:sarasharma2827@gmail.com" data-cursor="Email">sarasharma2827@gmail.com ↗</a><div class="contact-links"><a href="https://linkedin.com/in/sharmasara" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/saraasharmaa" target="_blank" rel="noopener">GitHub ↗</a><a href="assets/resumes/sara-sharma-data-scientist.pdf" download>Résumé ↗</a></div></div>
+      <div class="contact-side reveal reveal-delay-2"><div class="contact-location">INDIA / 2026</div><div class="contact-small">Data · AI · Research · Decision Systems</div></div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <span>© 2026 SARA SHARMA</span>
-    <span>Designed for intelligent systems, thoughtful research, and useful outcomes.</span>
-  </footer>
+  <footer class="footer"><div>© 2026 Sara Sharma</div><div>BUILT AROUND DATA, NOT DECORATION.</div><a href="#top">Back to top ↑</a></footer>
+
+  <div class="case-modal" id="caseModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel"><button class="modal-close" aria-label="Close project details" data-close-modal>×</button><div id="modalContent"></div></div>
+  </div>
 
   <script src="script.js"></script>
 </body>
