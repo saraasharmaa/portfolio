@@ -1,54 +1,53 @@
-# Sara Sharma Portfolio
+# Sara Sharma Portfolio v2
 
-## Run locally
+A redesigned static portfolio based on the updated Data Scientist résumé supplied with the project.
 
-Open `index.html` in a browser, or use a local server:
+## Direction
 
-```bash
+Editorial old-money palette meets modern technology: warm ivory, forest green, oxblood and brass, with serif display typography, mono labels, grid/noise texture, and restrained motion.
+
+Interactive behavior includes a preloader, scroll reveals, animated KPI counters, capability marquee, project filtering, project-detail modal, magnetic buttons, custom cursor, card tilt, image hover effects, and reduced-motion support.
+
+The structure also takes cues from the supplied Squarespace portfolio reference, especially clean project presentation and dedicated work / résumé / contact sections. Squarespace describes its portfolio layouts as mobile-friendly and customizable for individual projects. Source: https://www.squarespace.com/websites/create-a-portfolio/
+
+## Updated résumé
+
+The uploaded résumé is included as:
+assets/resumes/sara-sharma-data-scientist.pdf
+
+The site is already wired to view and download it.
+
+## Institutional images
+
+The current cards use remote image URLs to keep this package small:
+IIT Bombay: https://images.indianexpress.com/2026/02/IIT-Bombay.jpg?w=1600
+NITI Aayog: https://bsmedia.business-standard.com/_media/bs/img/article/2024-10/23/thumb/fitandfill/1200X900/1729678919-1389.jpg
+DRDO Bhawan: https://upload.wikimedia.org/wikipedia/commons/7/76/DRDO_Bhawan.jpg
+
+For a production site, replacing these with local images you have permission to publish is recommended. The institution pages themselves link to IIT Bombay, NITI Aayog and DRDO official sites.
+
+## Multiple targeted résumés
+
+The interface is ready for additional PDFs. Put them in assets/resumes/ and add links in index.html.
+Suggested filenames:
+sara-sharma-ai-ml-engineer.pdf
+sara-sharma-quantitative-analytics.pdf
+sara-sharma-financial-economic-analysis.pdf
+sara-sharma-policy-decision-intelligence.pdf
+sara-sharma-ai-ml-research.pdf
+
+## Local run
+
 python3 -m http.server 8000
-```
 
-Then visit:
+Then open http://localhost:8000
 
-http://localhost:8000
+## Deploy
 
-## Add resume PDFs
+This is plain HTML/CSS/JS, so it can be deployed directly to GitHub Pages, Netlify, Vercel, Cloudflare Pages, or another static host.
 
-Place your role-specific PDFs in:
+## What is optional from Sara
 
-```text
-assets/resumes/
-```
+Nothing is required to run the current version.
 
-Use these filenames, or update the paths in `script.js`:
-
-- sara-sharma-master.pdf
-- sara-sharma-ai-ml-engineer.pdf
-- sara-sharma-quantitative-analytics.pdf
-- sara-sharma-financial-economic-analysis.pdf
-- sara-sharma-ai-ml-research.pdf
-- sara-sharma-policy-decision-intelligence.pdf
-
-## Add institutional images
-
-Place approved images in:
-
-```text
-assets/images/
-```
-
-Expected filenames:
-
-- iit-bombay.jpg
-- niti-aayog.jpg
-- drdo.jpg
-
-## Deployment
-
-This is a static website. It can be deployed using:
-
-- GitHub Pages
-- Netlify
-- Vercel
-- Cloudflare Pages
-- Any static web host
+For a fully personal final pass, useful additions are an optional professional headshot, project screenshots / demo links, and the actual targeted résumé PDFs to show in the multi-resume selector. No additional information is needed to use the résumé content already supplied.
